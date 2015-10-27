@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -79,9 +80,9 @@ public class OneFragment extends Fragment {
         if(savedInstanceState == null) {
             TextView tv = (TextView) getView().findViewById(R.id.textView);
             tv.setText(mParam1);
-//            FragmentTransaction ft = getChildFragmentManager().beginTransaction();
-//            SubOneFragment subOneFragment = new SubOneFragment();
-//            ft.replace(R.id.sub_fragment_container, subOneFragment, subOneFragment.getClass().getSimpleName()).commit();
+            FragmentTransaction ft = getChildFragmentManager().beginTransaction();
+            SubOneFragment subOneFragment = new SubOneFragment();
+            ft.replace(R.id.sub_fragment_container, subOneFragment, subOneFragment.getClass().getSimpleName()).commit();
         }
     }
 

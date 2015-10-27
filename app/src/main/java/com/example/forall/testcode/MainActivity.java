@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements OneFragment.OnFragmentInteractionListener {
@@ -42,13 +41,10 @@ public class MainActivity extends AppCompatActivity implements OneFragment.OnFra
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    Log.e("","getItem ------------------->: " +position);
                     return OneFragment.newInstance("OneFragment", "");
                 case 1:
-                    Log.e("","getItem ------------------->: " +position);
                     return TwoFragment.newInstance("TwoFragment", "");
                 case 2:
-                    Log.e("","getItem ------------------->: " +position);
                     return ThreeFragment.newInstance("ThreeFragment", "");
             }
             return null;
