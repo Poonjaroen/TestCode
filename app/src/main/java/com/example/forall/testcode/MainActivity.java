@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity implements OneFragment.OnFra
 
     int i = 0;
 
+    String name = "TEST";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
